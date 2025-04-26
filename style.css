@@ -1,0 +1,22 @@
+/* static/style.css */
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f1f1f1;
+}
+
+.container {
+  background: white;
+  padding: 2rem;
+  width: 400px;
+  margin: 50px auto;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(38, 4, 131, 0.1);
+}
+
+input,
+button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+}

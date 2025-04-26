@@ -1,0 +1,35 @@
+<!-- templates/index.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Brain Stroke Predictor</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Brain Stroke Prediction</h1>
+        <form action="/predict" method="post">
+            <input type="text" name="gender" placeholder="Gender (0=Female, 1=Male)" required>
+            <input type="text" name="age" placeholder="Age" required>
+            <input type="text" name="hypertension" placeholder="Hypertension (0/1)" required>
+            <input type="text" name="heart_disease" placeholder="Heart Disease (0/1)" required>
+            <input type="text" name="ever_married" placeholder="Married (0/1)" required>
+            <input type="text" name="work_type"
+                placeholder="Work Type (0=Children,1=Govt,2=NeverWorked,3=Private,4=Self-employed)" required>
+            <input type="text" name="Residence_type" placeholder="Residence (0=Rural, 1=Urban)" required>
+            <input type="text" name="avg_glucose_level" placeholder="Avg Glucose Level" required>
+            <input type="text" name="bmi" placeholder="BMI" required>
+            <input type="text" name="smoking_status" placeholder="Smoking Status (0-3)" required>
+            <button type="submit">Predict</button>
+        </form>
+        {% if prediction_text %}
+        <h3>{{ prediction_text }}</h3>
+        {% endif %}
+    </div>
+</body>
+
+</html>
